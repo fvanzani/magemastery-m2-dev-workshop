@@ -3,6 +3,7 @@
     <module name="MageMastery_Todo"  >
         <sequence>
             <module name="Magento_Customer"/>
+            <module name="Magento_Ui"/>
         </sequence>
     </module>
 </config>
