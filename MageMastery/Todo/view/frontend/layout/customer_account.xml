@@ -9,7 +9,6 @@
                     <argument name="sortOrder" xsi:type="number">30</argument>
                 </arguments>
             </block>
-
         </referenceBlock>
     </body>
 </page>
