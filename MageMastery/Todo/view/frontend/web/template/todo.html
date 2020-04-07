@@ -1,5 +1,7 @@
+<!-- ko if: ($data.tasks) -->
 <ul>
     <li repeat="foreach: tasks, item: 'task'">
         <span translate="task().label"/>
     </li>
 </ul>
+<!-- /ko -->
