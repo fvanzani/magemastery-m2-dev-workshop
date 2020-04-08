@@ -11,7 +11,20 @@
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template"
                    name="magemastery.todo.block.list"
-                   template="MageMastery_Todo::todo.phtml" />
+                   template="MageMastery_Todo::todo.phtml" >
+
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="todo" xsi:type="array">
+                                <item name="component" xsi:type="string">MageMastery_Todo/js/view/todo</item>
+                                <item name="template" xsi:type="string">MageMastery_Todo/todo</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+
+            </block>
         </referenceContainer>
     </body>
 </page>
