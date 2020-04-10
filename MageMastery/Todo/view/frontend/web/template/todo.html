@@ -1,12 +1,12 @@
 <!-- ko if: ($data.tasks) -->
-<ul>
+<ul class="tasks">
     <li repeat="foreach: tasks, item: 'task'">
         <a data-bind="
              attr: {
                 class: 'status ' + (task().status ? 'complete' : 'open' )
              }
-            " class="status complete">Open</a>
-        <span translate="task().label"/>
+            " >Open</a>
+        <span class="label" translate="task().label"/>
     </li>
 </ul>
 <!-- /ko -->
