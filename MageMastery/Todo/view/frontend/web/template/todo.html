@@ -9,6 +9,11 @@
              click: switchStatus
             " ></a>
         <span class="label" translate="task().label"/>
+        <a class="action delete" data-bind="
+        attr: {
+            'data-id': task().id
+        }
+">Delete</a>
     </li>
 </ul>
 <!-- /ko -->
