@@ -27,7 +27,8 @@ ul.tasks li .status:hover {
 ul.tasks li .status.open {
     border: 2px solid #ccc;
 }
-ul.tasks li .status.open {
+
+ul.tasks li .status.complete {
     border: 2px solid #82cc78;
     background: #82cc78;
 }
