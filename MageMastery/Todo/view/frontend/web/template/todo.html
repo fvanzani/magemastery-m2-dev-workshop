@@ -1,6 +1,10 @@
 <!-- ko if: ($data.tasks) -->
 <ul class="tasks">
-    <li repeat="foreach: tasks, item: 'task'">
+    <li repeat="foreach: tasks, item: 'task'" data-bind="
+            attr: {
+                class: (task().is_deleted ? 'deleted' : '' )
+             },
+">
         <a data-bind="
              attr: {
                 class: 'status ' + (task().status ? 'complete' : 'open' ),
@@ -13,7 +17,7 @@
         attr: {
             'data-id': task().id
         },
-        click: deleteTask.bind($data, task().id)
+        click: deleteTask
 ">Delete</a>
     </li>
 </ul>

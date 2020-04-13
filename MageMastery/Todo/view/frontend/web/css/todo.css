@@ -5,6 +5,9 @@ ul.tasks {
 ul.tasks li {
     display: flex;
 }
+ul.tasks li.deleted {
+    display: none;
+}
 
 ul.tasks li .label {
     margin-top: 2px;

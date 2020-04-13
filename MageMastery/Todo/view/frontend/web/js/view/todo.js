@@ -4,10 +4,10 @@ define(['uiComponent','jquery'],function(Component,$) {
     return Component.extend({
         defaults: {
             tasks: [
-                {id:1, label: "Task 1", status:false},
-                {id:2, label: "Task 2", status:false},
-                {id:3, label: "Task 3", status:false},
-                {id:4, label: "Task 4", status:true}
+                {id:1, label: "Task 1", status:false, is_deleted:false},
+                {id:2, label: "Task 2", status:false, is_deleted:false},
+                {id:3, label: "Task 3", status:false, is_deleted:false},
+                {id:4, label: "Task 4", status:true, is_deleted:false}
             ]
         },
         initObservable: function () {
@@ -26,7 +26,7 @@ define(['uiComponent','jquery'],function(Component,$) {
             this.tasks(items);
         },
 
-        deleteTask: function (taskId) {
+        deleteTask_old: function (taskId) {
             var tasks = [];
             if (this.tasks().length === 1) {
                 this.tasks(tasks);
@@ -38,7 +38,17 @@ define(['uiComponent','jquery'],function(Component,$) {
                 }
             });
             this.tasks(tasks);
-            this.tasks(tasks);
+        },
+
+        deleteTask: function (data, event) {
+            const taskId= $(event.target).data('id');
+            var items = this.tasks().map(function(task){
+                if(task.id === taskId) {
+                    task.is_deleted=true;
+                }
+                return task;
+            });
+            this.tasks(items);
         },
 
     });
