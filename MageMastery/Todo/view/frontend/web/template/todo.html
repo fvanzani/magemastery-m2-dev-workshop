@@ -12,7 +12,8 @@
         <a class="action delete" data-bind="
         attr: {
             'data-id': task().id
-        }
+        },
+        click: deleteTask.bind($data, task().id)
 ">Delete</a>
     </li>
 </ul>
