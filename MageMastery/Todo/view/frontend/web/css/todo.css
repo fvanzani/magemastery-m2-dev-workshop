@@ -32,3 +32,16 @@ ul.tasks li .status.complete {
     border: 2px solid #82cc78;
     background: #82cc78;
 }
+
+.form-container {
+    margin: 0 20px 20px 20px;
+    display:flex;
+
+}
+.form-container .task-input-field {
+    max-width: 80%;
+    border-radius: 2px;
+}
+.form-container .actions-toolbar {
+    margin-left: 5px;
+}
