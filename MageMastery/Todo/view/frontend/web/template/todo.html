@@ -3,14 +3,17 @@
            class="task-input-field"
            id="todo-task-input"
            name="task" value=""
+           data-bind="value: newTaskLabel "
            placeholder="Add a new task..."
     />
+    <!--  ko-value="newTaskLabel" -->
     <div class="actions-toolbar">
         <div class="primary">
             <button type="button"
                     title="Add Task"
                     class="action save primary"
                     id="add-new-task-button"
+                    data-bind="click: addTask"
             ><span>Add Task</span></button>
         </div>
     </div>
