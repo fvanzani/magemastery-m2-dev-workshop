@@ -3,7 +3,10 @@
            class="task-input-field"
            id="todo-task-input"
            name="task" value=""
-           data-bind="value: newTaskLabel "
+           data-bind="
+           value: newTaskLabel,
+           event: {'keyup': checkKey}
+           "
            placeholder="Add a new task..."
     />
     <!--  ko-value="newTaskLabel" -->

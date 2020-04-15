@@ -7,6 +7,7 @@ define([
     //console.log("todo");
     return Component.extend({
         defaults: {
+            buttonSelector: '#add-new-task-button',
             newTaskLabel: '',
             tasks: [
                 {id:1, label: "Task 1", status:false},
@@ -55,6 +56,9 @@ define([
         },
 
         addTask: function() {
+            if (this.newTaskLabel()==='') {
+                return;
+            }
             this.tasks.push({
                 id: Math.floor(Math.random()*100),
                 label: this.newTaskLabel(),
@@ -62,6 +66,13 @@ define([
             });
             this.newTaskLabel('');
         },
+        checkKey: function(data,event) {
+            if(event.keyCode===13) {
+                event.preventDefault();
+                $(this.buttonSelector).click();
+            }
+
+        }
 
     });
 });
