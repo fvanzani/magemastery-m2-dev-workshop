@@ -1,0 +1,14 @@
+{
+    "magemastery_todo_task": {
+        "column": {
+            "task_id": true,
+            "label": true,
+            "status": true,
+            "customer_id": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "MAGEMASTERY_TODO_TASK_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true
+        }
+    }
+}

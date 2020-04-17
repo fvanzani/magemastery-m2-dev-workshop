@@ -21,7 +21,7 @@
         </constraint>
 
         <constraint xsi:type="foreign"
-                    referenceId="CUSTOMER_ID_REFERENCE"
+                    referenceId="MAGEMASTERY_TODO_TASK_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID"
                     column="customer_id"
                     table="magemastery_todo_task"
                     referenceTable="customer_entity"
